@@ -1,0 +1,33 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot",
+    "dev": "webpack -d --watch",
+    "build": "webpack -p",
+    "bundle": "babel ./src/index.js --out-file ./dist/bundle.js",
+    "gh-page": "git subtree push --prefix dist origin gh-pages"
+  },
+  "author": "Kai Wedekind <wedekind.kai@googlemail.com> (https://www.kaiwedekind.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-loader": "3.2.0",
+    "babel-cli": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "css-loader": "0.28.9",
+    "json-loader": "0.5.7",
+    "node-sass": "4.7.2",
+    "normalize.css": "8.0.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.20.1",
+    "webpack": "3.11.0",
+    "webpack-dev-server": "2.11.1"
+  },
+  "dependencies": {}
+}
