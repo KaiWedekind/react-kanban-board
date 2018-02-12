@@ -1,0 +1,161 @@
+.board {
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    padding: 1rem;
+    background-color: #eee;
+    flex-wrap: wrap;
+}
+
+.board__pipeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0px;
+    padding: 0px;
+    min-width: 250px;
+}
+
+.board__pipeline {
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+}
+
+.board__pipeline-header {
+    display: flex;
+    width: 100%;
+}
+
+.board__pipeline-title {
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: #848484;
+    font-weight: 400;
+}
+
+.board__cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px;
+    padding: 1rem;
+}
+
+.board__card {
+    display: flex;
+    margin: 0.3rem;
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    min-height:12em;
+    min-width:12em;
+    width:12em;
+    padding:1em;
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.board__card {
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform:rotate(-6deg);
+}
+
+.board__card:nth-child(even) {
+    -o-transform:rotate(4deg);
+    -webkit-transform:rotate(4deg);
+    -moz-transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#cfc;
+}
+
+.board__card:nth-child(3n) {
+    -o-transform:rotate(-3deg);
+    -webkit-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+    background:#ccf;
+}
+
+.board__card:nth-child(4n) {
+    -o-transform:rotate(8deg);
+    -webkit-transform:rotate(8deg);
+    -moz-transform:rotate(8deg);
+    position:relative;
+    top:-5px;
+    background:#E03C8C;
+}
+
+.board__card:nth-child(5n) {
+    -o-transform:rotate(5deg);
+    -webkit-transform:rotate(5deg);
+    -moz-transform:rotate(5deg);
+    position:relative;
+    top:-10px;
+}
+
+.board__card:hover, .board__card:focus {
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    position:relative;
+    z-index:5;
+}
+
+.board__card-title {
+    font-size: 1rem;
+    margin: 0px;
+}
+
+.board__card-title::before {
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.board__card-title.show::before {
+    content: '▼'
+}
+
+.board__card-title.hidden::before {
+    content: '▶'
+}
+
+.board__card-description {
+    margin: .6rem 0px;
+}
+
+.board__card-details {
+    font-size: 0.9rem;
+}
+
+.board__checklist {
+    
+}
+
+.board__task > input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.board__task {
+    padding: 5px;
+}
+
+.board__task:first-child {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: dashed 1px #ddd;
+}
+
+.board__task--remove:after{
+    display: inline-block;
+    color: #d66;
+    content: "+";
+}
